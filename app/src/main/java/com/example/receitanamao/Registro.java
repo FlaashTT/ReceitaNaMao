@@ -11,27 +11,27 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Login extends AppCompatActivity {
+public class Registro extends AppCompatActivity {
 
-    // Variaveis
-    private Button btnVoltarAtrasLogin;
+    private Button btnVoltarAtrasRegistro;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_registro);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        btnVoltarAtrasLogin = findViewById(R.id.btnVoltarAtrasRegistro);
+        btnVoltarAtrasRegistro = findViewById(R.id.btnVoltarAtrasRegistro);
 
-        btnVoltarAtrasLogin.setOnClickListener(new View.OnClickListener() {
+        btnVoltarAtrasRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this, AtividadeIntroducao.class);
+                Intent intent = new Intent(Registro.this, AtividadeIntroducao.class);
                 startActivity(intent);
                 finish();
             }

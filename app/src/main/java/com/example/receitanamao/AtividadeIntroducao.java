@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class AtividadeIntroducao extends AppCompatActivity {
 
     //Variaveis
-    private Button btnJaSouUtilizador;
+    private Button btnJaSouUtilizador, btnNovoUtilizadorRegistro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +28,21 @@ public class AtividadeIntroducao extends AppCompatActivity {
         });
 
         btnJaSouUtilizador = findViewById(R.id.btnJaSouUtilizador);
+        btnNovoUtilizadorRegistro = findViewById(R.id.btnNovoUtilizadorRegistro);
 
         btnJaSouUtilizador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AtividadeIntroducao.this, Login.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        btnNovoUtilizadorRegistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AtividadeIntroducao.this, Registro.class);
                 startActivity(intent);
                 finish();
             }
