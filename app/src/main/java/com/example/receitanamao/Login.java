@@ -2,6 +2,7 @@ package com.example.receitanamao;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,28 +12,27 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class AtividadeIntroducao extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
-    //Variaveis
-    private Button btnJaSouUtilizador;
-
+    // Variaveis
+    private Button btnVoltarAtrasLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_atividade_introducao);
+        setContentView(R.layout.activity_login);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        btnJaSouUtilizador = findViewById(R.id.btnJaSouUtilizador);
+        btnVoltarAtrasLogin = findViewById(R.id.btnVoltarAtrasLogin);
 
-        btnJaSouUtilizador.setOnClickListener(new View.OnClickListener() {
+        btnVoltarAtrasLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AtividadeIntroducao.this, Login.class);
+                Intent intent = new Intent(Login.this, AtividadeIntroducao.class);
                 startActivity(intent);
                 finish();
             }

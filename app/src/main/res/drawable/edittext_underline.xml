@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fundo transparente -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <!-- Linha inferior personalizada -->
+    <item android:top="39dp"> <!-- Ajuste `top` para posicionar a linha inferior -->
+        <shape android:shape="rectangle">
+            <solid android:color="#8BC34A" /> <!-- Substitua pela cor desejada -->
+            <size android:height="2dp" /> <!-- Espessura da linha -->
+        </shape>
+    </item>
+</layer-list>
