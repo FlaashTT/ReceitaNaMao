@@ -34,7 +34,8 @@ public class BD_ReceitaNaMao extends SQLiteOpenHelper {
 
         String Categorias = "CREATE TABLE " + TABELA_CATEGORIAS + " (" +
                 "category_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "name TEXT NOT NULL UNIQUE" +
+                "name TEXT NOT NULL UNIQUE, " +
+                "description TEXT NOT NULL UNIQUE" +
                 ")";
 
         String Receitas = "CREATE TABLE " + TABELA_RECEITAS + " (" +
